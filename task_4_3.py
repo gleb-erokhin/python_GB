@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 
+
 def currency_rates_d(money):
     try:
         money = money.upper()  # регистр кода валюты будет всегда верхний
@@ -24,6 +25,7 @@ def currency_rates_d(money):
         money = None
 
 
-print(currency_rates_d('usd'))
-print(currency_rates_d('AMD'))
-print(currency_rates_d('gbp'))
+if __name__ == '__main__':
+    print(currency_rates_d('usd'))
+    print(currency_rates_d('AMD'))
+    print(currency_rates_d('gbp'))
