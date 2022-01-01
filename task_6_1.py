@@ -1,8 +1,7 @@
-# with open('nginx_logs.txt', 'w+', encoding='utf-8') as file:
-#     ext = file.read()
-#     print(ext)
-# print(file.closed)
-
 f_obj = open('nginx_logs.txt', 'r', encoding='utf-8')
-lines = f_obj.readlines()
-print(lines)
+my_l = []
+for line in f_obj:
+    str_my = line.split()
+    my_l.append((str_my[0], str_my[5].replace('"', ''), str_my[6]))
+f_obj.close()
+print(my_l)
